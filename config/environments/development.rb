@@ -1,4 +1,7 @@
 Rails.application.configure do
+
+  require "rubygems"
+
   # Verifies that versions and hashed value of the package contents in the project's package.json
   config.webpacker.check_yarn_integrity = true
 
@@ -15,8 +18,7 @@ Rails.application.configure do
   # Show full error reports.
   config.consider_all_requests_local = true
 
-  config.assets.css_compressor = :yui
-  config.assets.js_compressor = :uglifier
+
 
   # Enable/disable caching. By default caching is disabled.
   if Rails.root.join('tmp/caching-dev.txt').exist?
